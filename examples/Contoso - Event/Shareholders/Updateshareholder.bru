@@ -1,0 +1,31 @@
+meta {
+  name: Updateshareholder
+  type: http
+  seq: 1
+}
+
+put {
+  url: {{baseUrl}}/shareholders/{{shareholderId}}
+  body: json
+  auth: inherit
+}
+headers {
+  Authorization: {{PLACEHOLDER}}
+}
+
+body:json {
+  {
+    "name": "{{PLACEHOLDER}}",
+    "email": "{{PLACEHOLDER}}"
+  }
+}
+
+vars:pre-request {
+  shareholderId: {{PLACEHOLDER}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+

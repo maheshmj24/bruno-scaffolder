@@ -1,0 +1,74 @@
+# Bruno Scaffolder - Git Ignore File
+
+# Development files (private swagger files)
+dev/
+*.swagger.json
+pos-swagger.json
+
+# PowerShell specific
+*.ps1xml
+*.psd1
+*.psm1
+[Tt]emp/
+[Tt]mp/
+*.tmp
+*.log
+
+# Test outputs
+test-*
+*-test-output/
+array-test-*
+format-test-*
+
+# IDE and Editor files
+.vscode/
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+$RECYCLE.BIN/
+Desktop.ini
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output directories (except main bruno folder structure)
+output/
+build/
+dist/
+
+# Temporary Bruno collections for testing
+bruno-test/
+test-bruno/
+temp-bruno/

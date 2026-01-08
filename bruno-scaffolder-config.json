@@ -1,0 +1,28 @@
+{
+    "defaultCompanyName": "Contoso",
+    "defaultEnvironments": [
+        "LOCAL",
+        "DEV",
+        "TST"
+    ],
+    "defaultBaseUrls": {
+        "LOCAL": "https://localhost:5001/api",
+        "DEV": "https://api-dev.contoso.com",
+        "TST": "https://api-test.contoso.com",
+        "UAT": "https://api-uat.contoso.com",
+        "PROD": "https://api.contoso.com"
+    },
+    "apiNamingRules": {
+        "removePrefixes": [
+            "API",
+            "Service",
+            "Controller"
+        ],
+        "removeSuffixes": [
+            "API",
+            "Service",
+            "Controller"
+        ],
+        "usePascalCase": true
+    }
+}

@@ -1,0 +1,26 @@
+meta {
+  name: Getshareholderslite
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/shareholders/lite
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~page: {{PLACEHOLDER}}
+  ~pageSize: {{PLACEHOLDER}}
+}
+
+headers {
+  Authorization: {{PLACEHOLDER}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+

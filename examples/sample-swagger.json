@@ -1,0 +1,151 @@
+{
+    "openapi": "3.0.1",
+    "info": {
+        "title": "Event API",
+        "version": "1.0.0",
+        "description": "Sample API for demonstrating Bruno scaffolder"
+    },
+    "servers": [
+        {
+            "url": "https://api-dev.contoso.com/api/v1",
+            "description": "Development server"
+        }
+    ],
+    "paths": {
+        "/events/{eventId}": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Get Event Detail",
+                "operationId": "GetEventDetail",
+                "parameters": [
+                    {
+                        "name": "eventId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The unique identifier of the event"
+                    },
+                    {
+                        "name": "includeDetails",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "boolean"
+                        },
+                        "description": "Whether to include detailed information"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Event details retrieved successfully"
+                    },
+                    "404": {
+                        "description": "Event not found"
+                    }
+                }
+            }
+        },
+        "/shareholders/lite": {
+            "get": {
+                "tags": [
+                    "Shareholders"
+                ],
+                "summary": "Get Shareholders Lite",
+                "operationId": "GetShareholdersLite",
+                "parameters": [
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Bearer token for authentication"
+                    },
+                    {
+                        "name": "page",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "Page number for pagination"
+                    },
+                    {
+                        "name": "pageSize",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        },
+                        "description": "Number of items per page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Shareholders list retrieved successfully"
+                    }
+                }
+            }
+        },
+        "/shareholders/{shareholderId}": {
+            "put": {
+                "tags": [
+                    "Shareholders"
+                ],
+                "summary": "Update Shareholder",
+                "operationId": "UpdateShareholder",
+                "parameters": [
+                    {
+                        "name": "shareholderId",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "The unique identifier of the shareholder"
+                    },
+                    {
+                        "name": "Authorization",
+                        "in": "header",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        },
+                        "description": "Bearer token for authentication"
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Shareholder updated successfully"
+                    },
+                    "404": {
+                        "description": "Shareholder not found"
+                    }
+                }
+            }
+        }
+    }
+}
