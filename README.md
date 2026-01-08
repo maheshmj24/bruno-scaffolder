@@ -4,7 +4,7 @@
 
 The **Bruno Scaffolder** is a PowerShell tool that automatically generates complete Bruno API collections from Swagger/OpenAPI JSON specifications. It eliminates the manual overhead of creating individual `.bru` files and ensures consistency with organizational standards.
 
-This tool follows the [Bruno Collection Structure and Process](./Bruno.md) guidelines to create properly organized collections.
+This tool follows the [Bruno Collection Structure and Process](./BrunoCollectionProcess.md) guidelines to create properly organized collections.
 
 ## Features
 
@@ -129,7 +129,7 @@ Customize organizational defaults by editing `bruno-scaffolder-config.json`:
 ### Code Reviews
 
 - Include generated .bru files in pull requests
-- Follow the [development guidelines](./Bruno.md#development-guidelines) for PR requirements
+- Follow the [development guidelines](./BrunoCollectionProcess.md#development-guidelines) for PR requirements
 
 ### Team Onboarding
 
@@ -154,7 +154,7 @@ This creates a sample collection demonstrating the expected output structure.
 ## Benefits
 
 - **Time Savings**: Eliminates manual creation of dozens of .bru files
-- **Consistency**: Ensures all collections follow [organizational standards](./Bruno.md)
+- **Consistency**: Ensures all collections follow [organizational standards](./BrunoCollectionProcess.md)
 - **Accuracy**: Collections always match API specifications
 - **Maintenance**: Easy to regenerate when APIs evolve
 - **Team Alignment**: Everyone uses the same collection structure
@@ -190,6 +190,6 @@ Run with `-Verbose` flag for detailed output:
 ## Next Steps
 
 1. Generate your Bruno collection using the scaffolder
-2. Follow the [Bruno Collection Guidelines](./Bruno.md) for customization
+2. Follow the [Bruno Collection Guidelines](./BrunoCollectionProcess.md) for customization
 3. Integrate into your development workflow
 4. Share with your team for consistent API testing

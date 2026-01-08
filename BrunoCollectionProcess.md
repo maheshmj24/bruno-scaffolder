@@ -66,4 +66,4 @@ The Bruno collections follow a standardized folder structure:
 
 ## Automation
 
-For automated creation of Bruno collections from Swagger/OpenAPI specifications, see the [Bruno Scaffolder Wiki](./BrunoScaffolder.md).
+For automated creation of Bruno collections from Swagger/OpenAPI specifications, see the [Bruno Scaffolder Wiki](./README.md).
